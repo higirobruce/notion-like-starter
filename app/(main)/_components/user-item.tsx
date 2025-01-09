@@ -30,7 +30,7 @@ function UserItem() {
         >
           <div className="gap-x-2 flex items-center max-w-[150px]">
             <Avatar className="h-6 w-6">
-              <AvatarImage src="https://github.com/shadcn.png" />
+              <AvatarImage src="https://avatars.githubusercontent.com/u/11076185?v=4" />
             </Avatar>
             <span className="text-start font-medium line-clamp-1">
               Bruce &apos;s work
@@ -52,7 +52,7 @@ function UserItem() {
           <div className="flex items-center gap-x-2">
             <div className="rounded-md bg-secondary p-1">
               <Avatar className="h-8 w-8">
-                <AvatarImage src="https://github.com/shadcn.png" />
+                <AvatarImage src="https://avatars.githubusercontent.com/u/11076185?v=4" />
               </Avatar>
             </div>
 

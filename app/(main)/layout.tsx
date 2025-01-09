@@ -9,7 +9,7 @@ function MainLayout({ children }: { children: React.ReactNode }) {
       <Navigation />
 
       <main className="flex-1 h-full overflow-y-auto">
-        <div className="flex w-full p-2">
+        <div className="flex w-full p-1">
           <div className="ml-auto">
             <ModeToggle />
           </div>

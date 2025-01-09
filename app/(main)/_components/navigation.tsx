@@ -9,7 +9,7 @@ import {
   MenuIcon,
   Users2,
 } from "lucide-react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React, {
   ComponentRef,
   ElementRef,
@@ -22,6 +22,7 @@ import UserItem from "./user-item";
 import Item from "./item";
 
 function Navigation() {
+  const router = useRouter();
   const pathname = usePathname();
   const isMobile = useMediaQuery("(max-width: 768px)");
   const isResizingRef = useRef(false);
@@ -138,10 +139,30 @@ function Navigation() {
         <div>
           <UserItem />
 
-          <Item onClick={() => {}} label="Dashboard" icon={ChartLine} />
-          <Item onClick={() => {}} label="Guards" icon={Users2} />
-          <Item onClick={() => {}} label="Parade points" icon={LocateIcon} />
-          <Item onClick={() => {}} label="Attendance" icon={ListTodo} />
+          <Item
+            onClick={() => router.push("/dashboard")}
+            label="Dashboard"
+            icon={ChartLine}
+            active={pathname === "/dashboard"}
+          />
+          <Item
+            onClick={() => router.push("/guards")}
+            label="Guards"
+            icon={Users2}
+            active={pathname === "/guards"}
+          />
+          <Item
+            onClick={() => router.push("/parade-points")}
+            label="Parade points"
+            icon={LocateIcon}
+            active={pathname === "/parade-points"}
+          />
+          <Item
+            onClick={() => router.push("/attendance")}
+            label="Attendance"
+            icon={ListTodo}
+            active={pathname === "/attendance"}
+          />
         </div>
 
         <div
